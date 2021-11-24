@@ -12,6 +12,11 @@ import { HeroesComponent } from './heroes/heroes.component';
   imports: [
     BrowserModule,
     FormsModule
+    // Although ngModel is a valid Angular directive, it isn't available by default.
+    // It belongs to the optional FormsModule and you must opt-in to using it.
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
