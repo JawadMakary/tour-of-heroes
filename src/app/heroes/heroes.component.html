@@ -20,18 +20,6 @@
       <span class="badge">{{ hero.id }}</span> {{ hero.name }}
     </li>
   </ul>
-  <!-- if we do not put the conditional statement an error will pop up saying that -->
-  <!--if there is a selectedHero then display this division else don't show it -->
-  <div *ngIf="selectedHero">
-    <h2>{{ selectedHero.name | uppercase }} Details</h2>
-    <div><span>id: </span>{{ selectedHero.id }}</div>
-    <div>
-      <label for="hero-name">Hero name: </label>
-      <input
-        id="hero-name"
-        [(ngModel)]="selectedHero.name"
-        placeholder="name"
-      />
-    </div>
-  </div>
+  <!--Bind the HeroesComponent.selectedHero to the element's hero property -->
+  <app-hero-detail [hero]="selectedHero"></app-hero-detail>
 </div>
